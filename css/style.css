@@ -181,25 +181,37 @@ main::before {
 	padding: 0 15em;
 }
 .profile-item__img {
-	max-width: 100%;
+	display: block;
+	height: 300px;
 }
 .profile-item__text {
 	padding: 0 2em;
+}
+@media screen and (max-width:960px) {
+	.profile-item {
+		flex-flow: column;
+		align-items: center;
+		padding: 0 3em;
+	}
+	.profile-item__img {
+		width: 300px;
+	}
+
 }
 
 /* SERVICES */
 .services-wrapper {
 	display: flex;
-	width: 75%;
+	width: 88%;
 	margin: 50px auto 0;
 }
 .service-box {
 	flex: 1;
-	margin: 0 30px;
+	margin: 0 25px;
 	text-align: center;
 }
 .service-icon {
-	font-size: 10em;
+	font-size: calc(100px + 4vw);
 }
 .fa-code {
 	color: darksalmon;
@@ -222,6 +234,11 @@ main::before {
 	text-align: justify;
 	line-height: 1.75;
 	letter-spacing: 1px;
+}
+@media screen and (max-width:960px) {
+	.services-wrapper {
+		flex-flow: column wrap;
+	}
 }
 
 /* WORKS */
@@ -262,6 +279,9 @@ main::before {
 }
 .tagcolor-wordpress {
 	background: #59a6f5;
+}
+@media screen and (max-width:960px) {
+
 }
 
 /* CONTACT */
@@ -337,7 +357,7 @@ main::before {
     border-color: currentColor;
     color: #cc809f;
 }
-@media screen and (max-width:719px) {
+@media screen and (max-width:960px) {
     .contact-form {
         width: 100%;
         padding: 0 1em 8em 1em;
