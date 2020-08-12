@@ -127,38 +127,24 @@ main::before {
 }
 .main-title-area {
 	display: flex;
+	justify-content: space-between;
+	margin: 0 1em;
 }
 .main-title {
-	font-size: 1.6em;
+	font-size: calc(14px + 1vw);
 	font-weight: normal;
 	margin: 0;
 	padding: 0;
+	white-space: nowrap;
 }
 .main-subtitle {
-	font-size: 1.5em;
+	font-size: calc(12px + .9vw);
 	margin: 0 1em;
 	opacity: 0.8;
 }
 .main-subtitle::before,
 .main-subtitle::after {
 	content: ' // ';
-}
-
-/* Top Navigation Style */
-
-.codrops-links {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	margin: 0 0 0 auto;
-	text-align: center;
-	white-space: nowrap;
-}
-
-.codrops-icon {
-	display: inline-block;
-	margin: 0.25em;
-	padding: 0.5em;
 }
 
 /* メインビジュアル */
@@ -281,7 +267,9 @@ main::before {
 	background: #59a6f5;
 }
 @media screen and (max-width:960px) {
-
+	.works {
+		flex-flow: column;
+	}
 }
 
 /* CONTACT */
@@ -360,7 +348,7 @@ main::before {
 @media screen and (max-width:960px) {
     .contact-form {
         width: 100%;
-        padding: 0 1em 8em 1em;
+        padding: 0 1em;
     }
     .required::before {
         left: 1em;
