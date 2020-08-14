@@ -164,7 +164,9 @@ main::before {
 /* PROFILE */
 .profile-item {
 	display: flex;
-	padding: 0 15em;
+	justify-content: space-evenly;
+	width: 88%;
+	margin: 0 auto;
 }
 .profile-item__img {
 	display: block;
@@ -186,10 +188,10 @@ main::before {
 }
 
 /* SERVICES */
-.services-wrapper {
+.services-item {
 	display: flex;
 	width: 88%;
-	margin: 50px auto 0;
+	margin: 0 auto;
 }
 .service-box {
 	flex: 1;
@@ -230,6 +232,7 @@ main::before {
 /* WORKS */
 .works {
 	display: flex;
+	align-items: center;
 	justify-content: space-evenly;
 }
 .media-item {
