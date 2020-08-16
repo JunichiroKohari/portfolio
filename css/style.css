@@ -361,7 +361,7 @@ main::before {
     font-weight: 700;
     text-align: center;
     letter-spacing: .1em;
-    transition: .25s;
+    transition: .3s;
 }
 .btn:focus,
 .btn:hover {
