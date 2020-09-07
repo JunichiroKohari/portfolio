@@ -6,7 +6,7 @@
 		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
 		offset: 400, // offset (in px) from the original trigger point
 		duration: 1000, // values from 0 to 3000, with step 50ms
-		once: false, // whether animation should happen only once - while scrolling down
+		once: true, // whether animation should happen only once - while scrolling down
 	});
 
 	var canvas = document.querySelector('#webgl');

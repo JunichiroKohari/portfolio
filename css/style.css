@@ -83,7 +83,7 @@ main::before {
 	position: relative;
 	justify-content: center;
 	min-height: 75vh;
-	margin: 15em 2em 0 2em;
+	margin: 8em 2em 0 2em;
 	padding: 4em 1.5em 8em 1.5em;
 	background: rgba(53, 50, 50, 0.92);
 	z-index: 10;
@@ -109,6 +109,11 @@ main::before {
 	line-height: 1.75;
 	letter-spacing: 1px;
 }
+@media screen and (max-width: 415px) {
+	.content--related {
+		margin: 6em 0 0 0;
+	}
+}
 
 /* ヘッダー */
 .content--header {
@@ -129,6 +134,7 @@ main::before {
 	display: flex;
 	justify-content: space-between;
 	margin: 0 1em;
+	white-space: nowrap;
 }
 .main-title {
 	font-size: calc(14px + 1vw);
@@ -145,6 +151,13 @@ main::before {
 .main-subtitle::before,
 .main-subtitle::after {
 	content: ' // ';
+}
+@media screen and (max-width: 415px) {
+	.main-title-area {
+		flex-flow: wrap;
+		justify-content: space-evenly;
+		white-space: nowrap;
+	}
 }
 
 /* メインビジュアル */
@@ -172,9 +185,6 @@ main::before {
 	display: block;
 	height: 300px;
 }
-.profile-item__text {
-	padding: 0 2em;
-}
 @media screen and (max-width:960px) {
 	.profile-item {
 		flex-flow: column;
@@ -184,7 +194,14 @@ main::before {
 	.profile-item__img {
 		width: 300px;
 	}
-
+}
+@media screen and (max-width: 415px) {
+	.profile-item__img {
+		width: 260px;
+	}
+	.text-style {
+		font-size: calc(12px + .2vw);
+	}
 }
 
 /* SERVICES */
@@ -218,14 +235,17 @@ main::before {
 	margin-top: 2em;
 	font-size: 1.6em;
 }
-.service-text {
-	text-align: justify;
-	line-height: 1.75;
-	letter-spacing: 1px;
-}
 @media screen and (max-width:960px) {
 	.services-item {
 		flex-flow: column wrap;
+	}
+}
+@media screen and (max-width: 415px) {
+	.services-item {
+		width: 100%;
+	}
+	.service-box {
+		margin: 25px 0;
 	}
 }
 
@@ -291,8 +311,8 @@ main::before {
 	}
 }
 @media screen and (max-width: 415px) {
-	.works {
-
+	.media-item__img {
+		max-width: 90%;
 	}
 }
 
@@ -331,7 +351,7 @@ main::before {
 	padding: .35em 1.4em;
 	border-radius: 5px;
     color: #fff;
-    font-size: calc(1rem + .1vw);
+    font-size: calc(1rem + .05vw);
     background: #F682AF;
 }
 .contact-input {
@@ -380,6 +400,22 @@ main::before {
     .contact-txt {
         height: 187px;
     }
+}
+@media screen and (max-width: 415px) {
+	.contact-form {
+		padding: 0;
+	}
+	.required div::before {
+		padding: 0;
+		background: transparent;
+		color: #cc809f;
+	}
+}
+
+/* フッター */
+.copyright {
+	font-size: calc(10px + .1vw);
+	word-break: break-all;
 }
 
 #webgl {
