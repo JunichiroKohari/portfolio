@@ -132,6 +132,7 @@ main::before {
 }
 .main-title-area {
 	display: flex;
+	flex-flow: wrap;
 	justify-content: space-between;
 	margin: 0 1em;
 	white-space: nowrap;
@@ -330,25 +331,27 @@ main::before {
     text-align: center;
 }
 .contact-label {
+	position: relative;
+	display: block;
     margin-bottom: 1em;
     color: #fff;
     font-size: calc(1rem + .3vw);
     text-align: center;
 }
 .input-name {
-    position: relative;
-    padding-top: .2em;
+	display: block;
+	padding-top: .2em;
     margin-bottom: 1em;
     font-weight: 500;
 }
-.required div::before {
-    content: '必須';
-    display: block;
+.required {
+	display: block;
     position: absolute;
-    bottom: -3px;
-    left: 0;
+	left: 0;
+	bottom: -.35em;
+	width: 4.5em;
     margin-top: -.5em;
-	padding: .35em 1.4em;
+	padding: .35em .4em;
 	border-radius: 5px;
     color: #fff;
     font-size: calc(1rem + .05vw);
@@ -394,9 +397,6 @@ main::before {
         width: 100%;
         padding: 0 1em;
     }
-    .required::before {
-        left: 1em;
-    }
     .contact-txt {
         height: 187px;
     }
@@ -405,7 +405,9 @@ main::before {
 	.contact-form {
 		padding: 0;
 	}
-	.required div::before {
+	.required1 {
+		left: -20px;
+		bottom: 0;
 		padding: 0;
 		background: transparent;
 		color: #cc809f;

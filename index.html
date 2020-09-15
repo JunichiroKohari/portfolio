@@ -30,11 +30,11 @@
 				</div>
 			</div>
 		</header>
-		<section class="content main-visual">
+		<div class="content main-visual">
 			<p class="main-visual__message">
 				fast,<br>clean,<br>useful
 			</p>
-		</section>
+		</div>
 		<section class="content content--related" data-aos="zoom-in-up" data-aos-offset="200" data-aos-delay="100">
 			<h3 class="content__text">PROFILE</h3>
 			<div class="profile-item">
@@ -42,7 +42,7 @@
 				<div class="profile-item__text text-style">
 					<p>ご訪問ありがとうございます!Junichiro Kohariと申します。</p>
 					<p>大阪府内でSEとして働くかたわら、Web制作のお仕事も行っております。</p>
-					<p>SEの仕事で培ったヒアリング力とプログラミングスキルを活かして、お客様のWebサイト制作・運用を成功に導きます。</p>
+					<p>趣味は、外国人の友達とチャットをすることです。ポーランド人やウルグアイ人など、ネットで出会った友達と週末によくチャットをしています。普段当たり前のようにネットでコミュニケーションを取っていますが、はるか遠く離れた所にいる人と瞬時にやりとりができるってすごいことですよね。私は、ネットによって人と人とが繋がるという体験を仕事でも実現させていきたいなと思っています。</p>
 					<p>ちょっとした相談やお悩み事の相談でも構いません。</p>
 					<p>ご気軽にご連絡ください。</p>
 					<p>■ 使用PC、ツール</p>
@@ -63,7 +63,7 @@
 					<i class="fab fa-wordpress service-icon"></i>
 					<div class="service-title">WordPress</div>
 					<p class="text-style">
-						WordePressを利用したWebサイト制作を行います。
+						WordePressを利用したオリジナルテーマ開発を行います。
 						新規作成から既存サイトのカスタマイズまで幅広く承っております。
 						設定の変更やプラグインの導入まで柔軟に対応いたします。
 					</p>
@@ -73,7 +73,7 @@
 					<div class="service-title">コーディング</div>
 					<p class="text-style">
 						HTML、CSSのコーディングを行います。
-						デザインカンプのデザインを正確にHTML・CSSのコードに落とし込んでいきます。
+						基礎SEO施策を意識し、デザインカンプのデザインを正確にHTML・CSSのコードに落とし込んでいきます。
 						SassやLessなどのCSS拡張言語やBEMなどのCSS設計にも対応いたします。
 					</p>
 				</div>
@@ -92,7 +92,7 @@
 			<h3 class="content__text">WORKS</h3>
 			<div class="works text-style">
 				<a class="media-item" href="#">
-					<img class="media-item__img" src="img/works/dummy1.png">
+					<img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画">
 					<h3 class="media-item__title">株式会社テスト様公式HP</h3>
 					<div class="tags">
 						<span class="tag tagcolor-coding">#コーディング</span>
@@ -103,7 +103,7 @@
 					</div>
 				</a>
 				<a class="media-item" href="#">
-					<img class="media-item__img" src="img/works/dummy2.png">
+					<img src="img/works/dummy2.png" class="media-item__img" alt="テスト太郎様個人ブログのトップ画">
 					<h3 class="media-item__title">テスト太郎様個人ブログ</h3>
 					<div class="tags">
 						<span class="tag tagcolor-wordpress">#WordPress</span>
@@ -113,7 +113,7 @@
 					</div>
 				</a>
 				<a class="media-item" href="#">
-					<img class="media-item__img" src="img/works/dummy3.png">
+					<img src="img/works/dummy3.png" class="media-item__img" alt="テスト花子様個人ブログのトップ画">
 					<h3 class="media-item__title">テスト花子様個人ブログ</h3>
 					<div class="tags">
 						<span class="tag tagcolor-wordpress">#WordPress</span>
@@ -127,18 +127,27 @@
 		<section class="content content--related" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="100">
 			<h3 class="content__text">CONTACT</h3>
 			<form action="#" class="contact-form">
-                <label for="name" class="contact-label required">
-                    <div class="input-name">お名前</div>
-                    <input type="text" name="name" class="contact-input" required>
-                </label>
-                <label for="email" class="contact-label required">
-                    <div class="input-name">メールアドレス</div>
-                    <input type="email" name="email" class="contact-input" required>
-                </label>
-                <label for="contact-txt" class="contact-label required">
-                    <div class="input-name">メッセージ</div>
+				<div>
+					<label class="contact-label">
+						<span class="required">必須</span>
+						<span class="input-name">お名前</span>
+					</label>
+					<input type="text" class="contact-input" required>
+				</div>
+				<div>
+					<label class="contact-label">
+						<span class="required">必須</span>
+						<span class="input-name">メールアドレス</span>
+					</label>
+					<input type="email" class="contact-input" required>
+				</div>
+				<div>
+					<label class="contact-label">
+						<span class="required">必須</span>
+						<span class="input-name">メッセージ</span>
+					</label>
                     <textarea name="contact-txt" class="contact-input contact-txt" required></textarea>
-                </label>
+				</div>
                 <div class="btn-div">
                     <button class="btn" onclick="alert('hey');">送信</button>
                 </div>
@@ -238,8 +247,8 @@
 		vec2 center = vec2(sin(TWO_PI * time * 0.5), cos(TWO_PI * time * 0.5)) * nsin(time * 0.3) * 0.3;
 		vec2 tx = (gl_FragCoord.xy / resolution.xy - 0.5 + center) * vec2(aspect, 1.0) * 2.0;
 		float len = 1.0 - length(tx - center * 2.0) * 0.3;
-		float zoom = 1.0 + scroll * 50.0;
-		float angle = PI * scroll * len;
+		float zoom = 1.0 + scroll * 1.0;
+		float angle = PI * scroll;
 		float value = 0.0;
 		int age = 0;
 		vec3 hex = coordToHex(tx, zoom, angle);

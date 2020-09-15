@@ -31,7 +31,7 @@
 		var draw = regl({
 			frag: document.querySelector('#fragmentShader').textContent,
 			vert: 'attribute vec2 position; void main() { gl_Position = vec4(3.0 * position, 0.0, 1.0); }',
-			attributes: { position: [-1, 0, 0, -1, 1, 1] },
+			attributes: { position: [-1, 0, 1, -1, 0, 1] },
 			count: 3,
 			uniforms: {
 				globaltime: regl.prop('globaltime'),
@@ -52,12 +52,12 @@
 			canvas.height = 768;
 
 			// Scroll amount (0.0 to 1.0)
-			scroll = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight) - 1;
+			scroll = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
 
 			// Scroll Velocity
 			// Inertia example:
-			velocity = velocity * 0.99 + (scroll - lastScroll);
-			lastScroll = scroll;
+			// velocity = velocity * 0.99 + (scroll - lastScroll);
+			// lastScroll = scroll;
 
 			// Clear the draw buffer
 			regl.clear({ color: [0, 0, 0, 0] });
