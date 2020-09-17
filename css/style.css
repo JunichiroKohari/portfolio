@@ -284,6 +284,7 @@ main::before {
 	margin: 3px;
 	padding: 1px 10px;
 	border-radius: 10px;
+	color: white;
 }
 .tagcolor-coding {
 	background: darksalmon;
@@ -299,6 +300,22 @@ main::before {
 }
 .tagcolor-quality {
 	background: peru;
+}
+.modaal-window {
+	display: none;
+	background: aliceblue;
+}
+.modaal-window-wrapper1 {
+	display: flex;
+}
+.dummy1-modal-left {
+	flex: 4;
+}
+.dummy1-modal-right {
+	flex: 6;
+}
+.modal-tags {
+	width: 80%;
 }
 @media screen and (max-width: 960px) {
 	.works {

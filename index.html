@@ -16,6 +16,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/modaal.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script>document.documentElement.className = 'js';</script>
 </head>
@@ -91,7 +92,7 @@
 		<section class="content content--related" data-aos="zoom-in" data-aos-delay="100">
 			<h3 class="content__text">WORKS</h3>
 			<div class="works text-style">
-				<a class="media-item" href="#">
+				<a id="dummy1" class="media-item modaal" href="#dummy1-modal">
 					<img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画">
 					<h3 class="media-item__title">株式会社テスト様公式HP</h3>
 					<div class="tags">
@@ -102,7 +103,7 @@
 						<span class="tag tagcolor-quality">#納品一週間以内</span>
 					</div>
 				</a>
-				<a class="media-item" href="#">
+				<a class="media-item modaal" href="#dummy2-modal">
 					<img src="img/works/dummy2.png" class="media-item__img" alt="テスト太郎様個人ブログのトップ画">
 					<h3 class="media-item__title">テスト太郎様個人ブログ</h3>
 					<div class="tags">
@@ -112,7 +113,7 @@
 						<span class="tag tagcolor-quality">#SEO</span>
 					</div>
 				</a>
-				<a class="media-item" href="#">
+				<a class="media-item modaal" href="#dummy3-modal">
 					<img src="img/works/dummy3.png" class="media-item__img" alt="テスト花子様個人ブログのトップ画">
 					<h3 class="media-item__title">テスト花子様個人ブログ</h3>
 					<div class="tags">
@@ -122,11 +123,18 @@
 						<span class="tag tagcolor-quality">#納品一週間以内</span>
 					</div>
 				</a>
+				<div id="dummy1-modal" class="modaal-window">
+					<div class="modaal-window-wrapper1"></div>
+				</div>
+				<div id="dummy2-modal" class="modaal-window">
+				</div>
+				<div id="dummy3-modal" class="modaal-window">
+				</div>
 			</div>
 		</section>
 		<section class="content content--related" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="100">
 			<h3 class="content__text">CONTACT</h3>
-			<p class="contact-info">当サイトやお仕事についてのお問い合わせは以下にご入力いただき、送信をお願いいたします。</p>
+			<p class="contact-info">&#x1f481;&nbsp;当サイトやお仕事についてのお問い合わせは以下にご入力いただき、送信をお願いいたします。</p>
 			<p class="contact-info">原則として3日以内にご返信いたします。</p>
 			<form action="#" class="contact-form">
 				<div>
@@ -161,6 +169,8 @@
 			</div>
 		</footer>
 	</main>
+	<script src='//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script src="js/modaal.min.js"></script>
 	<script src="js/regl.min.js"></script>
 	<script type="x-shader/x-fragment" id="fragmentShader">
 	#define TWO_PI 6.2831853072

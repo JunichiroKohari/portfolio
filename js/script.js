@@ -9,6 +9,20 @@
 		once: true, // whether animation should happen only once - while scrolling down
 	});
 
+	$('#dummy1').on('click', function() {
+		$('.modaal-window-wrapper1').html('');
+		$('.modaal-window-wrapper1').html('<div class="dummy1-modal-left"><img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画"><h3 class="media-item__title">株式会社テスト様公式HP</h3><div class="tags modal-tags"><span class="tag tagcolor-coding">#コーディング</span><span class="tag tagcolor-category">#コーポレートサイト</span><span class="tag tagcolor-design">#ビジネス</span><span class="tag tagcolor-design">#シンプル</span><span class="tag tagcolor-quality">#納品一週間以内</span></div></div>');
+		$('.modaal-window-wrapper1').append('<p class="dummy1-modal-right">dummy1の紹介文</p>');
+	})
+	$('#dummy2').on('click', function() {
+		$('#dummy1-modal').html('<img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画"><h3 class="media-item__title">株式会社テスト様公式HP</h3><div class="tags"><span class="tag tagcolor-coding">#コーディング</span><span class="tag tagcolor-category">#コーポレートサイト</span><span class="tag tagcolor-design">#ビジネス</span><span class="tag tagcolor-design">#シンプル</span><span class="tag tagcolor-quality">#納品一週間以内</span></div>');
+	})
+	$('#dummy3').on('click', function() {
+		$('#dummy1-modal').html('<img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画"><h3 class="media-item__title">株式会社テスト様公式HP</h3><div class="tags"><span class="tag tagcolor-coding">#コーディング</span><span class="tag tagcolor-category">#コーポレートサイト</span><span class="tag tagcolor-design">#ビジネス</span><span class="tag tagcolor-design">#シンプル</span><span class="tag tagcolor-quality">#納品一週間以内</span></div>');
+	})
+	// モーダルライブラリ初期化
+	$('.modaal').modaal();
+
 	var canvas = document.querySelector('#webgl');
 
 	// スクロール用変数
