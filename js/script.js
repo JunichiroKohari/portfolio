@@ -10,15 +10,19 @@
 	});
 
 	$('#dummy1').on('click', function() {
-		$('.modaal-window-wrapper1').html('');
-		$('.modaal-window-wrapper1').html('<div class="dummy1-modal-left"><img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画"><h3 class="media-item__title">株式会社テスト様公式HP</h3><div class="tags modal-tags"><span class="tag tagcolor-coding">#コーディング</span><span class="tag tagcolor-category">#コーポレートサイト</span><span class="tag tagcolor-design">#ビジネス</span><span class="tag tagcolor-design">#シンプル</span><span class="tag tagcolor-quality">#納品一週間以内</span></div></div>');
-		$('.modaal-window-wrapper1').append('<p class="dummy1-modal-right">dummy1の紹介文</p>');
+		$('#modaal-window-wrapper1').html('');
+		$('#modaal-window-wrapper1').html('<div class="dummy-modal-left"><img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画"><h3 class="media-item__title">株式会社テスト様公式HP</h3><div class="tags modal-tags"><span class="tag tagcolor-coding">#コーディング</span><span class="tag tagcolor-category">#コーポレートサイト</span><span class="tag tagcolor-design">#ビジネス</span><span class="tag tagcolor-design">#シンプル</span><span class="tag tagcolor-quality">#納品一週間以内</span></div></div>');
+		$('#modaal-window-wrapper1').append('<p class="dummy-modal-right">dummy1の紹介文</p>');
 	})
 	$('#dummy2').on('click', function() {
-		$('#dummy1-modal').html('<img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画"><h3 class="media-item__title">株式会社テスト様公式HP</h3><div class="tags"><span class="tag tagcolor-coding">#コーディング</span><span class="tag tagcolor-category">#コーポレートサイト</span><span class="tag tagcolor-design">#ビジネス</span><span class="tag tagcolor-design">#シンプル</span><span class="tag tagcolor-quality">#納品一週間以内</span></div>');
+		$('#modaal-window-wrapper2').html('');
+		$('#modaal-window-wrapper2').html('<div class="dummy-modal-left"><img src="img/works/dummy2.png" class="media-item__img" alt="テスト太郎様個人ブログ"><h3 class="media-item__title">テスト太郎様個人ブログ</h3><div class="tags modal-tags"><span class="tag tagcolor-wordpress">#WordPress</span><span class="tag tagcolor-category">#個人ブログ</span><span class="tag tagcolor-design">#アフィリエイト</span><span class="tag tagcolor-quality">#SEO</span></div></div>');
+		$('#modaal-window-wrapper2').append('<p class="dummy-modal-right">dummy2の紹介文</p>');
 	})
 	$('#dummy3').on('click', function() {
-		$('#dummy1-modal').html('<img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画"><h3 class="media-item__title">株式会社テスト様公式HP</h3><div class="tags"><span class="tag tagcolor-coding">#コーディング</span><span class="tag tagcolor-category">#コーポレートサイト</span><span class="tag tagcolor-design">#ビジネス</span><span class="tag tagcolor-design">#シンプル</span><span class="tag tagcolor-quality">#納品一週間以内</span></div>');
+		$('#modaal-window-wrapper3').html('');
+		$('#modaal-window-wrapper3').html('<div class="dummy-modal-left"><img src="img/works/dummy3.png" class="media-item__img" alt="テスト花子様個人ブログ"><h3 class="media-item__title">テスト花子様個人ブログ</h3><div class="tags modal-tags"><span class="tag tagcolor-wordpress">#WordPress</span><span class="tag tagcolor-category">#個人ブログ</span><span class="tag tagcolor-design">#おしゃれ</span><span class="tag tagcolor-quality">#納品一週間以内</span></div></div>');
+		$('#modaal-window-wrapper3').append('<p class="dummy-modal-right">dummy3の紹介文</p>');
 	})
 	// モーダルライブラリ初期化
 	$('.modaal').modaal();

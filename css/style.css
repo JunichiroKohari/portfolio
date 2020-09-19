@@ -305,13 +305,16 @@ main::before {
 	display: none;
 	background: aliceblue;
 }
-.modaal-window-wrapper1 {
+.modaal-window-wrapper {
 	display: flex;
 }
-.dummy1-modal-left {
+.dummy-modal-left {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
 	flex: 4;
 }
-.dummy1-modal-right {
+.dummy-modal-right {
 	flex: 6;
 }
 .modal-tags {
@@ -325,6 +328,11 @@ main::before {
 	.media-item {
 		width: 40vw;
 		min-width: 280px;
+	}
+	.modaal-window-wrapper {
+		flex-flow: column;
+		align-items: center;
+
 	}
 }
 @media screen and (max-width: 415px) {
@@ -428,7 +436,7 @@ main::before {
 	.contact-form {
 		padding: 0;
 	}
-	.required1 {
+	.required {
 		left: -20px;
 		bottom: 0;
 		padding: 0;
