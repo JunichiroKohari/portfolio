@@ -82,8 +82,9 @@ main::before {
 .content--related {
 	position: relative;
 	justify-content: center;
+	max-width: 1150px;
 	min-height: 75vh;
-	margin: 8em 2em 0 2em;
+	margin: 5em auto;
 	padding: 4em 1.5em 8em 1.5em;
 	background: rgba(53, 50, 50, 0.92);
 	z-index: 10;
@@ -285,6 +286,7 @@ main::before {
 	padding: 1px 10px;
 	border-radius: 10px;
 	color: white;
+	font-size: .8em;
 }
 .tagcolor-coding {
 	background: darksalmon;
@@ -328,6 +330,7 @@ main::before {
 	.media-item {
 		width: 40vw;
 		min-width: 280px;
+		padding: 2.3em 1em;
 	}
 	.modaal-window-wrapper {
 		flex-flow: column;
@@ -385,7 +388,7 @@ main::before {
 	padding: .35em .4em;
 	border-radius: 5px;
     color: #fff;
-    font-size: calc(1rem + .05vw);
+    font-size: .8rem;
     background: #F682AF;
 }
 .contact-input {
@@ -394,7 +397,6 @@ main::before {
     padding: 9px 15px;
     border: 1px solid #8C9BB0;
     border-radius: 5px;
-    font-size: 1.6rem;
 }
 .contact-txt {
     height: 240px;
@@ -446,9 +448,22 @@ main::before {
 }
 
 /* フッター */
+.footer {
+	margin-top: -3em;
+	text-align: center;
+}
 .copyright {
+	padding-bottom: 2em;
 	font-size: calc(10px + .1vw);
 	word-break: break-all;
+}
+@media screen and (max-width:960px) {
+	.footer {
+		margin-top: 0;
+	}
+	.copyright {
+		padding-bottom: .5em;
+	}
 }
 
 #webgl {
