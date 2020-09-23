@@ -24,8 +24,19 @@
 		$('#modaal-window-wrapper3').html('<div class="dummy-modal-left"><img src="img/works/dummy3.png" class="media-item__img" alt="テスト花子様個人ブログ"><h3 class="media-item__title">テスト花子様個人ブログ</h3><div class="tags modal-tags"><span class="tag tagcolor-wordpress">#WordPress</span><span class="tag tagcolor-category">#個人ブログ</span><span class="tag tagcolor-design">#おしゃれ</span><span class="tag tagcolor-quality">#納品一週間以内</span></div></div>');
 		$('#modaal-window-wrapper3').append('<p class="dummy-modal-right">dummy3の紹介文</p>');
 	})
+
 	// モーダルライブラリ初期化
 	$('.modaal').modaal();
+
+	// スクロールボタン押下時処理　トップに戻る
+	$(window).scroll(function () {
+		var now = $(window).scrollTop();
+		if (now > 200) {
+		  $('.pagetop').fadeIn("slow");
+		} else {
+		  $('.pagetop').fadeOut('slow');
+		}
+	});
 
 	var canvas = document.querySelector('#webgl');
 

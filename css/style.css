@@ -87,7 +87,6 @@ main::before {
 	margin: 5em auto;
 	padding: 4em 1.5em 8em 1.5em;
 	background: rgba(53, 50, 50, 0.92);
-	z-index: 10;
 }
 .content__text {
 	width: 100%;
@@ -284,7 +283,7 @@ main::before {
 .tag {
 	margin: 3px;
 	padding: 1px 10px;
-	border-radius: 10px;
+	border-radius: 3px;
 	color: white;
 	font-size: .8em;
 }
@@ -386,7 +385,7 @@ main::before {
 	width: 4.5em;
     margin-top: -.5em;
 	padding: .35em .4em;
-	border-radius: 5px;
+	border-radius: 3px;
     color: #fff;
     font-size: .8rem;
     background: #F682AF;
@@ -458,12 +457,37 @@ main::before {
 	word-break: break-all;
 }
 @media screen and (max-width:960px) {
-	.footer {
-		margin-top: 0;
-	}
 	.copyright {
 		padding-bottom: .5em;
 	}
+}
+@media screen and (max-width:415px) {
+	.footer {
+		margin-top: 0;
+	}
+}
+
+/* ページTOPに戻る */
+.pagetop{
+    display: none;
+    position: fixed;
+    right: 15px;
+    bottom: 0;
+}
+.pagetop a{
+    display: block;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: cornflowerblue;
+    border-radius: 50%;
+    line-height: 50px;
+}
+.pagetop a i{
+    font-size: 20px;
+    color:#fff;
+    line-height: 50px;
 }
 
 #webgl {
