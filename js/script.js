@@ -4,11 +4,32 @@
 	// フェードインライブラリ初期化
 	AOS.init({
 		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-		offset: 400, // offset (in px) from the original trigger point
+		//offset: 400, // offset (in px) from the original trigger point
 		duration: 1000, // values from 0 to 3000, with step 50ms
 		once: true, // whether animation should happen only once - while scrolling down
 	});
 
+	// ハンバーガーメニュー
+    $('.hamb-button').on('click', function() {
+        if ($('.hamb-nav').length) {
+			$('.hamb-button').removeClass('close-button');
+            $('.nav').removeClass('hamb-nav');
+            $('.nav').addClass('display-none');
+        } else {
+            $('.hamb-button').addClass('close-button');
+            $('.nav').addClass('hamb-nav');
+            $('.nav').removeClass('display-none');
+        }
+    });
+    $('.nav-link').on('click', function() {
+        if ($('.hamb-nav').length) {
+            $('.hamb-button').removeClass('close-button');
+            $('.nav').removeClass('hamb-nav');
+            $('.nav').addClass('display-none');
+        }
+    });
+
+	// Works モーダル
 	$('#dummy1').on('click', function() {
 		$('#modaal-window-wrapper1').html('');
 		$('#modaal-window-wrapper1').html('<div class="dummy-modal-left"><img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画"><h3 class="media-item__title">株式会社テスト様公式HP</h3><div class="tags modal-tags"><span class="tag tagcolor-coding">#コーディング</span><span class="tag tagcolor-category">#コーポレートサイト</span><span class="tag tagcolor-design">#ビジネス</span><span class="tag tagcolor-design">#シンプル</span><span class="tag tagcolor-quality">#納品一週間以内</span></div></div>');
