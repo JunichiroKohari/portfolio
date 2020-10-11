@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja" class="no-js">
 <head>
-	<meta charset="UTF-8" />
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Junichiro Kohari Web制作</title>
-	<meta name="description" content="コーポレートサイト、個人ブログなどWeb制作を承っております！新規作成から既存サイトの改修まで幅広く対応しております！" />
-	<meta name="author" content="J.Kohari" />
+	<meta name="description" content="コーポレートサイト、個人ブログなどWeb制作を承っております！新規作成から既存サイトの改修まで幅広く対応しております！">
+	<meta name="author" content="J.Kohari">
 
 	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
@@ -13,11 +13,17 @@
 	<!-- Font Awesome -->
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<!-- css -->
+	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/modaal.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<script>document.documentElement.className = 'js';</script>
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- script -->
+	<script src='//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script src="js/modaal.min.js"></script>
+	<script src="js/regl.min.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<!-- favicon -->
 	<meta name="msapplication-square70x70logo" content="/site-tile-70x70.png">
@@ -60,281 +66,176 @@
 	<link rel="manifest" href="favicons/manifest.json">
 </head>
 <body class="demo-8 loading">
-	<canvas id="webgl"></canvas>
-	<main>
-		<header class="content--header">
-			<div class="content__top">
-				<div class="main-title-area">
-					<h1 class="main-title">Junichiro Kohari</h1>
-					<p class="main-subtitle">Web制作承ります&nbsp;&#128421;&nbsp;&#128187;&nbsp;&#128241;</p>
+	<div id="wrapper">
+		<canvas id="webgl"></canvas>
+		<main>
+			<header class="content--header">
+				<div class="content__top">
+					<div class="main-title-area">
+						<h1 class="main-title">Junichiro Kohari</h1>
+						<p class="main-subtitle">Web制作承ります &#128421; &#128187; &#128241;</p>
+					</div>
 				</div>
-			</div>
-			<nav class="nav display-none">
-				<ul class="nav-ul">
-					<li class="nav-li"><a href="#" class="nav-link">TOP</a></li>
-					<li class="nav-li"><a href="#profile" class="nav-link">PROFILE</a></li>
-					<li class="nav-li"><a href="#services" class="nav-link">SERVICES</a></li>
-					<li class="nav-li"><a href="#works" class="nav-link">WORKS</a></li>
-					<li class="nav-li"><a href="#contact" class="nav-link">CONTACT</a></li>
-				</ul>
-			</nav>
-			<div class="hamb-button">
-				<span class="border"></span>
-				<span class="border"></span>
-				<span class="border"></span>
-			</div>
-		</header>
-		<div class="content main-visual">
-			<p class="main-visual__message">
-				fast,<br>clean,<br>useful
-			</p>
-		</div>
-		<section id="profile" class="content content--related" data-aos="zoom" data-aos-delay="100">
-			<h3 class="content__text">PROFILE</h3>
-			<div class="profile-item">
-				<img src="img/download20200901084031.png" alt="プロフィール画像" class="profile-item__img">
-				<div class="profile-item__text text-style">
-					<p>ご訪問ありがとうございます!Junichiro Kohariと申します。</p>
-					<p>大阪府内でSEとして働くかたわら、Web制作のお仕事も行っております。</p>
-					<p>趣味は、外国人の友達とチャットをすることです。ポーランド人やウルグアイ人など、ネットで出会った友達と週末によくチャットをしています。普段当たり前のようにネットでコミュニケーションを取っていますが、はるか遠く離れた所にいる人と瞬時にやりとりができるってすごいことですよね。私は、ネットによって人と人とが繋がるという体験を仕事でも実現させていきたいなと思っています。</p>
-					<p>ちょっとした相談やお悩み事の相談でも構いません。</p>
-					<p>ご気軽にご連絡ください。</p>
-					<p>■ 使用PC、ツール</p>
-					<ul>
-						<li>Windows10</li>
-						<li>MacbookPro(MacOS&nbsp;Catalina)</li>
-						<li>VSCode</li>
-						<li>Adobe&nbsp;PhotoShop</li>
-						<li>Adobe&nbsp;XD</li>
+				<nav class="nav display-none">
+					<ul class="nav-ul">
+						<li class="nav-li"><a href="#wrapper" class="nav-link">TOP</a></li>
+						<li class="nav-li"><a href="#profile" class="nav-link">PROFILE</a></li>
+						<li class="nav-li"><a href="#services" class="nav-link">SERVICES</a></li>
+						<li class="nav-li"><a href="#works" class="nav-link">WORKS</a></li>
+						<li class="nav-li"><a href="#contact" class="nav-link">CONTACT</a></li>
 					</ul>
+				</nav>
+				<div class="hamb-button">
+					<span class="border"></span>
+					<span class="border"></span>
+					<span class="border"></span>
 				</div>
+			</header>
+			<div class="content main-visual">
+				<p class="main-visual__message">
+					fast,<br>clean,<br>useful
+				</p>
 			</div>
-		</section>
-		<section id="services" class="content content--related" data-aos="zoom" data-aos-delay="100">
-			<h3 class="content__text">SERVICES</h3>
-			<div class="services-item">
-				<div class="service-box">
-					<i class="fab fa-wordpress service-icon"></i>
-					<div class="service-title">WordPress</div>
-					<p class="text-style">
-						WordePressを利用したオリジナルテーマ開発を行います。
-						新規作成から既存サイトのカスタマイズまで幅広く承っております。
-						設定の変更やプラグインの導入まで柔軟に対応いたします。
-					</p>
-				</div>
-				<div class="service-box">
-					<i class="fas fa-code service-icon"></i>
-					<div class="service-title">コーディング</div>
-					<p class="text-style">
-						HTML、CSSのコーディングを行います。
-						基礎SEO施策を意識し、デザインカンプのデザインを正確にHTML・CSSのコードに落とし込んでいきます。
-						SassやLessなどのCSS拡張言語やBEMなどのCSS設計にも対応いたします。
-					</p>
-				</div>
-				<div class="service-box">
-					<i class="fas fa-palette service-icon"></i>
-					<div class="service-title">デザイン</div>
-					<p class="text-style">
-						Webサイトのデザインを行います。
-						PhotoShopやXDを用いて、お客様のビジネスが顧客に正しく伝わるようにWebデザインを構築いたします。
-						清潔感のあるシンプルなデザインや少しおしゃれな遊び心あるデザインを得意としております。
-					</p>
-				</div>
-			</div>
-		</section>
-		<section id="works" class="content content--related" data-aos="zoom" data-aos-delay="100">
-			<h3 class="content__text">WORKS</h3>
-			<div class="works text-style">
-				<a id="dummy1" class="media-item modaal" href="#dummy1-modal">
-					<img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画">
-					<h3 class="media-item__title">株式会社テスト様公式HP</h3>
-					<div class="tags">
-						<span class="tag tagcolor-coding">#コーディング</span>
-						<span class="tag tagcolor-category">#コーポレートサイト</span>
-						<span class="tag tagcolor-design">#ビジネス</span>
-						<span class="tag tagcolor-design">#シンプル</span>
-						<span class="tag tagcolor-quality">#納品一週間以内</span>
+			<section id="profile" class="content content--related" data-aos="zoom" data-aos-delay="100">
+				<h3 class="content__text">PROFILE</h3>
+				<div class="profile-item">
+					<img src="img/download20200901084031.png" alt="プロフィール画像" class="profile-item__img">
+					<div class="profile-item__text text-style">
+						<p>ご訪問ありがとうございます!Junichiro Kohariと申します。</p>
+						<p>大阪府内でSEとして働くかたわら、Web制作のお仕事も行っております。</p>
+						<p>趣味は、外国人の友達とチャットをすることです。ポーランド人やウルグアイ人など、ネットで出会った友達と週末によくチャットをしています。普段当たり前のようにネットでコミュニケーションを取っていますが、はるか遠く離れた所にいる人と瞬時にやりとりができるってすごいことですよね。私は、ネットによって人と人とが繋がるという体験を仕事でも実現させていきたいなと思っています。</p>
+						<p>ちょっとした相談やお悩み事の相談でも構いません。</p>
+						<p>ご気軽にご連絡ください。</p>
+						<p>■ 使用PC、ツール</p>
+						<ul>
+							<li>Windows10</li>
+							<li>MacbookPro(MacOS Catalina)</li>
+							<li>VSCode</li>
+							<li>Adobe PhotoShop</li>
+							<li>Adobe XD</li>
+						</ul>
 					</div>
-				</a>
-				<a id="dummy2" class="media-item modaal" href="#dummy2-modal">
-					<img src="img/works/dummy2.png" class="media-item__img" alt="テスト太郎様個人ブログのトップ画">
-					<h3 class="media-item__title">テスト太郎様個人ブログ</h3>
-					<div class="tags">
-						<span class="tag tagcolor-wordpress">#WordPress</span>
-						<span class="tag tagcolor-category">#個人ブログ</span>
-						<span class="tag tagcolor-design">#アフィリエイト</span>
-						<span class="tag tagcolor-quality">#SEO</span>
+				</div>
+			</section>
+			<section id="services" class="content content--related" data-aos="zoom" data-aos-delay="100">
+				<h3 class="content__text">SERVICES</h3>
+				<div class="services-item">
+					<div class="service-box">
+						<i class="fab fa-wordpress service-icon"></i>
+						<div class="service-title">WordPress</div>
+						<p class="text-style">
+							WordePressを利用したオリジナルテーマ開発を行います。
+							新規作成から既存サイトのカスタマイズまで幅広く承っております。
+							設定の変更やプラグインの導入まで柔軟に対応いたします。
+						</p>
 					</div>
-				</a>
-				<a id="dummy3" class="media-item modaal" href="#dummy3-modal">
-					<img src="img/works/dummy3.png" class="media-item__img" alt="テスト花子様個人ブログのトップ画">
-					<h3 class="media-item__title">テスト花子様個人ブログ</h3>
-					<div class="tags">
-						<span class="tag tagcolor-wordpress">#WordPress</span>
-						<span class="tag tagcolor-category">#個人ブログ</span>
-						<span class="tag tagcolor-design">#おしゃれ</span>
-						<span class="tag tagcolor-quality">#納品一週間以内</span>
+					<div class="service-box">
+						<i class="fas fa-code service-icon"></i>
+						<div class="service-title">コーディング</div>
+						<p class="text-style">
+							HTML、CSSのコーディングを行います。
+							基礎SEO施策を意識し、デザインカンプのデザインを正確にHTML・CSSのコードに落とし込んでいきます。
+							SassやLessなどのCSS拡張言語やBEMなどのCSS設計にも対応いたします。
+						</p>
 					</div>
+					<div class="service-box">
+						<i class="fas fa-palette service-icon"></i>
+						<div class="service-title">デザイン</div>
+						<p class="text-style">
+							Webサイトのデザインを行います。
+							PhotoShopやXDを用いて、お客様のビジネスが顧客に正しく伝わるようにWebデザインを構築いたします。
+							清潔感のあるシンプルなデザインや少しおしゃれな遊び心あるデザインを得意としております。
+						</p>
+					</div>
+				</div>
+			</section>
+			<section id="works" class="content content--related" data-aos="zoom" data-aos-delay="100">
+				<h3 class="content__text">WORKS</h3>
+				<div class="works text-style">
+					<a id="dummy1" class="media-item modaal" href="#dummy1-modal">
+						<img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画">
+						<h3 class="media-item__title">株式会社テスト様公式HP</h3>
+						<div class="tags">
+							<span class="tag tagcolor-coding">#コーディング</span>
+							<span class="tag tagcolor-category">#コーポレートサイト</span>
+							<span class="tag tagcolor-design">#ビジネス</span>
+							<span class="tag tagcolor-design">#シンプル</span>
+							<span class="tag tagcolor-quality">#納品一週間以内</span>
+						</div>
+					</a>
+					<a id="dummy2" class="media-item modaal" href="#dummy2-modal">
+						<img src="img/works/dummy2.png" class="media-item__img" alt="テスト太郎様個人ブログのトップ画">
+						<h3 class="media-item__title">テスト太郎様個人ブログ</h3>
+						<div class="tags">
+							<span class="tag tagcolor-wordpress">#WordPress</span>
+							<span class="tag tagcolor-category">#個人ブログ</span>
+							<span class="tag tagcolor-design">#アフィリエイト</span>
+							<span class="tag tagcolor-quality">#SEO</span>
+						</div>
+					</a>
+					<a id="dummy3" class="media-item modaal" href="#dummy3-modal">
+						<img src="img/works/dummy3.png" class="media-item__img" alt="テスト花子様個人ブログのトップ画">
+						<h3 class="media-item__title">テスト花子様個人ブログ</h3>
+						<div class="tags">
+							<span class="tag tagcolor-wordpress">#WordPress</span>
+							<span class="tag tagcolor-category">#個人ブログ</span>
+							<span class="tag tagcolor-design">#おしゃれ</span>
+							<span class="tag tagcolor-quality">#納品一週間以内</span>
+						</div>
+					</a>
+					<div id="dummy1-modal" class="modaal-window">
+						<div id="modaal-window-wrapper1" class="modaal-window-wrapper"></div>
+					</div>
+					<div id="dummy2-modal" class="modaal-window">
+						<div id="modaal-window-wrapper2" class="modaal-window-wrapper"></div>
+					</div>
+					<div id="dummy3-modal" class="modaal-window">
+						<div id="modaal-window-wrapper3" class="modaal-window-wrapper"></div>
+					</div>
+				</div>
+			</section>
+			<section id="contact" class="content content--related" data-aos="zoom" data-aos-delay="100">
+				<h3 class="content__text">CONTACT</h3>
+				<p class="contact-info">&#x1f481; 当サイトやお仕事についてのお問い合わせは以下にご入力いただき、送信をお願いいたします。</p>
+				<p class="contact-info">原則として3日以内にご返信いたします。</p>
+				<form action="#" class="contact-form">
+					<div>
+						<label class="contact-label">
+							<span class="required">必須</span>
+							<span class="input-name">お名前</span>
+						</label>
+						<input type="text" class="contact-input" required>
+					</div>
+					<div>
+						<label class="contact-label">
+							<span class="required">必須</span>
+							<span class="input-name">メールアドレス</span>
+						</label>
+						<input type="email" class="contact-input" required>
+					</div>
+					<div>
+						<label class="contact-label">
+							<span class="required">必須</span>
+							<span class="input-name">メッセージ</span>
+						</label>
+						<textarea name="contact-txt" class="contact-input contact-txt" required></textarea>
+					</div>
+					<div class="btn-div">
+						<button class="btn" onclick="alert('hey');">送信</button>
+					</div>
+				</form>
+			</section>
+			<footer class="footer">
+				<small class="copyright">COPYRIGHT©︎2020 Junichiro Kohari. ALL RIGHTS RESERVED.</small>
+			</footer>
+			<p class="pagetop" style="display: block;">
+				<a href="#wrapper">
+					<i class="fas fa-chevron-up"></i>
 				</a>
-				<div id="dummy1-modal" class="modaal-window">
-					<div id="modaal-window-wrapper1" class="modaal-window-wrapper"></div>
-				</div>
-				<div id="dummy2-modal" class="modaal-window">
-					<div id="modaal-window-wrapper2" class="modaal-window-wrapper"></div>
-				</div>
-				<div id="dummy3-modal" class="modaal-window">
-					<div id="modaal-window-wrapper3" class="modaal-window-wrapper"></div>
-				</div>
-			</div>
-		</section>
-		<section id="contact" class="content content--related" data-aos="zoom" data-aos-delay="100">
-			<h3 class="content__text">CONTACT</h3>
-			<p class="contact-info">&#x1f481;&nbsp;当サイトやお仕事についてのお問い合わせは以下にご入力いただき、送信をお願いいたします。</p>
-			<p class="contact-info">原則として3日以内にご返信いたします。</p>
-			<form action="#" class="contact-form">
-				<div>
-					<label class="contact-label">
-						<span class="required">必須</span>
-						<span class="input-name">お名前</span>
-					</label>
-					<input type="text" class="contact-input" required>
-				</div>
-				<div>
-					<label class="contact-label">
-						<span class="required">必須</span>
-						<span class="input-name">メールアドレス</span>
-					</label>
-					<input type="email" class="contact-input" required>
-				</div>
-				<div>
-					<label class="contact-label">
-						<span class="required">必須</span>
-						<span class="input-name">メッセージ</span>
-					</label>
-                    <textarea name="contact-txt" class="contact-input contact-txt" required></textarea>
-				</div>
-                <div class="btn-div">
-                    <button class="btn" onclick="alert('hey');">送信</button>
-                </div>
-            </form>
-		</section>
-		<footer class="footer">
-				<small class="copyright">COPYRIGHT©︎2020&nbsp;Junichiro&nbsp;Kohari.&nbsp;ALL&nbsp;RIGHTS&nbsp;RESERVED.</small>
-		</footer>
-		<p class="pagetop" style="display: block;">
-			<a href="#">
-				<i class="fas fa-chevron-up"></i>
-			</a>
-		</p>
-	</main>
-	<script src='//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-	<script src="js/modaal.min.js"></script>
-	<script src="js/regl.min.js"></script>
-	<script type="x-shader/x-fragment" id="fragmentShader">
-	#define TWO_PI 6.2831853072
-	#define PI 3.14159265359
-
-	precision highp float;
-
-	uniform float globaltime;
-	uniform vec2 resolution;
-	uniform float aspect;
-	uniform float scroll;
-	uniform float velocity;
-	uniform sampler2D gradient;
-
-	// アニメーションの速さ
-	const float timescale = 0.04;
-
-	float nsin(float value) {
-		return sin(value * TWO_PI) * 0.9 + 0.2;
-	}
-
-	vec2 rotate(vec2 v, float angle) {
-		float c = cos(angle);
-		float s = sin(angle);
-		return v * mat2(c, -s, s, c);
-	}
-
-	vec3 coordToHex(vec2 coord, float scale, float angle) {
-		vec2 c = rotate(coord, angle);
-		float q = (1.0 / 3.0 * sqrt(3.0) * c.x - 1.0 / 3.0 * c.y) * scale;
-		float r = 2.0 / 3.0 * c.y * scale;
-		return vec3(q, r, -q - r);
-	}
-
-	vec3 hexToCell(vec3 hex, float m) {
-		return fract(hex / m) * 2.0 - 1.0;
-	}
-
-	float absMax(vec3 v) {
-		return max(max(abs(v.x), abs(v.y)), abs(v.z));
-	}
-
-	float hexToFloat(vec3 hex, float amt) {
-		return mix(absMax(hex), 1.0 - length(hex) / sqrt(9.0), amt);
-	}
-
-	int getHexDir(vec3 hex) {
-		if (mod(floor(hex.x) - floor(hex.y) - floor(hex.z), 2.0) == 0.0) {
-			return 0;
-		} else {
-			return 1;
-		}
-	}
-
-	int getHexType(vec3 hex) {
-		if (mod(floor(hex.x) - floor(hex.y) - floor(hex.z), 3.0) == 0.0) {
-			return 0;
-		} else if (mod(floor(hex.x) - floor(hex.y) - floor(hex.z) - 1.0, 3.0) == 0.0) {
-			return 1;
-		} else {
-			return 2;
-		}
-	}
-
-	vec3 divideHex(vec3 hex, inout int age, float time) {
-		vec3 cell;
-		int dir = 0, type = 0;
-		float scale = 0.0;
-
-		for (int i = 0; i < 4; i++) {
-			scale = 1.0 + float(type) * nsin(time);
-			cell = hexToCell(hex * scale, 1.0);
-			dir = getHexDir(hex);
-			type = getHexType(hex);
-			hex = cell;
-			if (dir == 1 && type == 1) {
-				age = i;
-				break;
-			}
-		}
-		return cell;
-	}
-
-	void main(void) {
-		float time = globaltime * timescale;
-		vec2 center = vec2(sin(TWO_PI * time * 0.5), cos(TWO_PI * time * 0.5)) * nsin(time * 0.3) * 0.3;
-		vec2 tx = (gl_FragCoord.xy / resolution.xy - 0.5 + center) * vec2(aspect, 1.0) * 2.0;
-		float len = 1.0 - length(tx - center * 2.0) * 0.3;
-		float zoom = 1.0 + scroll * 1.0;
-		float angle = PI * scroll;
-		float value = 0.0;
-		int age = 0;
-		vec3 hex = coordToHex(tx, zoom, angle);
-		vec3 cell = divideHex(hex, age, time * 0.1);
-		float shift = float(age) / 3.0;
-
-		value = nsin(
-			hexToFloat(cell, nsin(time + shift)) * 0.1 * nsin(time * 0.5 + shift)
-			+ shift
-			+ time
-		) * len;
-
-		gl_FragColor = texture2D(gradient, vec2(0.0, value));
-	}
-	</script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+			</p>
+		</main>
+	</div>
+	<script src="js/shader.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

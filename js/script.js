@@ -78,8 +78,9 @@
 		setTimeout(function() { document.body.classList.remove('loading');}, 1000);
 
 		// Create a REGL draw command
+
 		var draw = regl({
-			frag: document.querySelector('#fragmentShader').textContent,
+			frag: FS_CODE,
 			vert: 'attribute vec2 position; void main() { gl_Position = vec4(3.0 * position, 0.0, 1.0); }',
 			attributes: { position: [-1, 0, 1, -1, 0, 1] },
 			count: 3,
