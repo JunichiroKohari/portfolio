@@ -1,6 +1,4 @@
-*,
-*::after,
-*::before {
+*, *::after, *::before {
 	box-sizing: border-box;
 }
 body {
@@ -13,8 +11,7 @@ a {
 	color: #fff;
 	outline: none;
 }
-a:hover,
-a:focus {
+a:hover, a:focus {
 	color: #fff;
 }
 ul {
@@ -54,7 +51,7 @@ main::before {
 }
 
 /* Page Loader */
-.js .loading::before {
+.js > .loading::before {
 	content: '';
 	position: fixed;
 	z-index: 1000;
@@ -64,7 +61,7 @@ main::before {
 	height: 100%;
 	background: #000;
 }
-.js .loading::after {
+.js > .loading::after {
 	content: '';
 	position: fixed;
 	z-index: 1001;
@@ -76,7 +73,7 @@ main::before {
 	pointer-events: none;
 	border-radius: 50%;
 	background: radial-gradient(circle, rgba(253,192,206,1) 0%, rgba(252,166,94,1) 35%, rgba(24,26,130,1) 100%);
-	animation: loaderAnim 0.8s ease-in infinite alternate forwards;
+	animation: loaderAnim .8s ease-in infinite alternate forwards;
 }
 @keyframes loaderAnim {
 	to {
@@ -118,6 +115,7 @@ main::before {
 @media screen and (max-width: 415px) {
 	.content--related {
 		margin: 6em 0 0 0;
+		padding: 2em 1.5em 4em 1.5em;
 	}
 }
 
@@ -159,6 +157,7 @@ main::before {
 .main-subtitle::after {
 	content: ' // ';
 }
+
 /* ハンバーガーメニュー */
 .nav-li {
     border-right: 1px solid #fff;
@@ -198,7 +197,8 @@ main::before {
     min-width: 40px;
     height: 40px;
     padding: 5px;
-    border-radius: 3px;
+	border-radius: 3px;
+	background: rgba(53, 50, 50);
     cursor: pointer;
     z-index: 2;
 }
@@ -208,6 +208,8 @@ main::before {
 	bottom: -1em;
 	left: 0;
 	width: 100%;
+	border-radius: 3px;
+	background: rgba(53, 50, 50);
 	text-align: center;
 	font-size: 11px;
 }
@@ -219,21 +221,25 @@ main::before {
 	background: #fff;
 	transition: all .7s;
 }
+.close-button {
+	background: rgba(53, 50, 50);
+}
 .close-button::after {
 	content: 'CLOSE';
+	background: rgba(53, 50, 50);
 }
-.close-button .border {
+.close-button > .border {
 	position: absolute;
 	top: 16px;
 	right: 0;
 }
-.close-button .border:nth-of-type(1) {
+.close-button > .border:nth-of-type(1) {
 	transform: rotate(45deg);
 }
-.close-button .border:nth-of-type(2) {
+.close-button > .border:nth-of-type(2) {
 	opacity: 0;
 }
-.close-button .border:nth-of-type(3) {
+.close-button > .border:nth-of-type(3) {
 	transform: rotate(-45deg);
 }
 .nav {
@@ -244,27 +250,29 @@ main::before {
 	position: fixed;
 	top: 0;
 	right: 0;
-	background: #3F86E9;
-	width: 100%;
+	width: 15em;
 	padding-bottom: 17em;
+	border: 2px solid rgba(53, 50, 50);
+	background: rgba(250, 250, 250);
 	transition: .7s ease-in-out;
 }
-.hamb-nav .nav-ul {
+.hamb-nav > .nav-ul {
 	flex-flow: column;
 	margin-top: 5.5em;
+	padding-left: 0;
 }
-.hamb-nav .nav-li {
+.hamb-nav > .nav-li {
 	height: 64px;
 	padding-top: 0;
 	border-right: 0;
-	text-align: right;
 }
-.hamb-nav .nav-link {
+.hamb-nav > .nav-link {
 	display: block;
 	padding: 12px 0;
-	padding-right: 25px;
 	font-size: calc(21px + .4vw);
 	font-weight: 400;
+	text-align: center;
+	color: rgba(53, 50, 50);
 }
 
 @media screen and (max-width: 415px) {
@@ -274,9 +282,6 @@ main::before {
 	}
 	.main-title {
 		padding-top: .8em;
-	}
-	.main-subtitle {
-		 display: none;
 	}
 }
 
@@ -292,6 +297,7 @@ main::before {
 	margin-top: .3em;
 	margin-bottom: 1.5em;
 	font-size: calc(3em + 6vw);
+	font-weight: 400;
 }
 
 /* PROFILE */
@@ -305,11 +311,13 @@ main::before {
 	display: block;
 	height: 300px;
 }
+.profile-item__text-syumi {
+	padding-bottom: .8em;
+}
 @media screen and (max-width:960px) {
 	.profile-item {
 		flex-flow: column;
 		align-items: center;
-		padding: 0 3em;
 	}
 	.profile-item__img {
 		width: 300px;
@@ -329,6 +337,7 @@ main::before {
 	display: flex;
 	width: 88%;
 	margin: 0 auto;
+	padding-left: 0;
 }
 .service-box {
 	flex: 1;
@@ -398,10 +407,11 @@ main::before {
 .tags {
 	display: flex;
 	flex-flow: wrap;
+	padding-left: 0;
 }
 .tag {
 	margin: 3px;
-	padding: 1px 10px;
+	padding: 2px 10px;
 	border-radius: 3px;
 	color: white;
 	font-size: .8em;
@@ -444,6 +454,7 @@ main::before {
 	.works {
 		flex-flow: column;
 		align-items: center;
+		padding-left: 0;
 	}
 	.media-item {
 		width: 40vw;
@@ -499,15 +510,15 @@ main::before {
 .required {
 	display: block;
     position: absolute;
-	left: 0;
-	bottom: -.35em;
-	width: 4.5em;
-    margin-top: -.5em;
-	padding: .35em .4em;
-	border-radius: 3px;
+    left: auto;
+    bottom: auto;
+    width: 4.5em;
+    padding: .35em .4em;
+    border-radius: 3px;
     color: #fff;
     font-size: .8rem;
     background: #F682AF;
+    text-align: center;
 }
 .contact-input {
     width: 100%;
@@ -537,8 +548,7 @@ main::before {
     letter-spacing: .1em;
     transition: .3s;
 }
-.btn:focus,
-.btn:hover {
+.btn:focus, .btn:hover {
     background: #fff;
     border-color: currentColor;
     color: #cc809f;
@@ -557,9 +567,7 @@ main::before {
 		padding: 0;
 	}
 	.required {
-		left: -20px;
-		bottom: 0;
-		padding: 0;
+		padding: 3px;
 		background: transparent;
 		color: #cc809f;
 	}
@@ -587,13 +595,13 @@ main::before {
 }
 
 /* ページTOPに戻る */
-.pagetop{
+.pagetop {
     display: none;
     position: fixed;
     right: 15px;
-    bottom: 0;
+    bottom: 15px;
 }
-.pagetop a{
+.pagetop > a {
     display: block;
     font-size: 0;
     width: 50px;
@@ -603,12 +611,13 @@ main::before {
     border-radius: 50%;
     line-height: 50px;
 }
-.pagetop a i{
+.pagetop > a > i {
     font-size: 20px;
     color:#fff;
     line-height: 50px;
 }
 
+/* WebGL設定 */
 #webgl {
 	position: fixed;
 	z-index: -1;
@@ -618,9 +627,7 @@ main::before {
 	width: 100vw;
 	height: 100vh;
 }
-
-
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 640px) {
 	.content--header {
 		padding: 1em 0.5em 0;
 	}

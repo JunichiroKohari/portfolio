@@ -1,6 +1,19 @@
 !function() {
 	'use strict';
 
+	// SP版「Web制作承ります」文字数変更
+    $(window).on('load resize', function(){
+		var winW = $(window).width();
+        var devW = 415;
+        if (winW <= devW) {
+          //767px以下の時の処理
+          $('.main-subtitle').html('Web制作承ります');
+        } else {
+          //768pxより大きい時の処理
+          $('.main-subtitle').html('Web制作承ります &#128421; &#128187; &#128241;');
+        }
+    });
+
 	// フェードインライブラリ初期化
 	AOS.init({
 		// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
@@ -11,22 +24,12 @@
 
 	// ハンバーガーメニュー
     $('.hamb-button').on('click', function() {
-        if ($('.hamb-nav').length) {
-			$('.hamb-button').removeClass('close-button');
-            $('.nav').removeClass('hamb-nav');
-            $('.nav').addClass('display-none');
-        } else {
-            $('.hamb-button').addClass('close-button');
-            $('.nav').addClass('hamb-nav');
-            $('.nav').removeClass('display-none');
-        }
+		$('.hamb-button').toggleClass('close-button');
+        $('.nav').toggleClass('hamb-nav display-none');
     });
     $('.nav-link').on('click', function() {
-        if ($('.hamb-nav').length) {
-            $('.hamb-button').removeClass('close-button');
-            $('.nav').removeClass('hamb-nav');
-            $('.nav').addClass('display-none');
-        }
+        $('.hamb-button').toggleClass('close-button');
+        $('.nav').toggleClass('hamb-nav display-none');
     });
 
 	// Works モーダル
@@ -78,7 +81,6 @@
 		setTimeout(function() { document.body.classList.remove('loading');}, 1000);
 
 		// Create a REGL draw command
-
 		var draw = regl({
 			frag: FS_CODE,
 			vert: 'attribute vec2 position; void main() { gl_Position = vec4(3.0 * position, 0.0, 1.0); }',
@@ -123,5 +125,4 @@
 			});
 		});
 	};
-
 }();
