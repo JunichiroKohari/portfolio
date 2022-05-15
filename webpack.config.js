@@ -4,13 +4,17 @@ const publidDir = path.join(__dirname, '/public')
 
 module.exports = [
   {
+    mode: "development",
+    devtool: "hidden-source-map",
     entry: [
       './js/index.js',
     ],
     output: {
       path: publidDir,
       publicPath: '/',
-      filename: 'bundle.js',
+      clean: {
+        keep: '/index.html/'
+      }
     },
     module: {
       rules: [
@@ -40,7 +44,7 @@ module.exports = [
   {
     mode: "development",
     entry: {
-      style: "./css/index.scss",
+      style: "./css/style.css",
     },
     output: {
       path: publidDir,
