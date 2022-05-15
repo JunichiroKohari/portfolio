@@ -85,11 +85,10 @@ main::before {
 .content--related {
 	position: relative;
 	justify-content: center;
-	max-width: 1150px;
 	min-height: 75vh;
 	margin: 5em auto;
 	padding: 4em 1.5em 8em 1.5em;
-	background: rgba(53, 50, 50, 0.92);
+	background: rgba(53, 50, 50, 0.98);
 }
 .content__text {
 	width: 100%;
@@ -203,7 +202,7 @@ main::before {
     z-index: 2;
 }
 .hamb-button::after {
-	content: 'MENU';
+	content: '';
 	position: absolute;
 	bottom: -1em;
 	left: 0;
@@ -297,7 +296,7 @@ main::before {
 	margin-top: .3em;
 	margin-bottom: 1.5em;
 	font-size: calc(3em + 6vw);
-	font-weight: 400;
+	font-weight: 900;
 }
 
 /* PROFILE */
