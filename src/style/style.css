@@ -38,7 +38,7 @@ main::before {
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
-	background: rgba(84, 115, 243, 0.3);
+	background: rgb(84, 115, 243, 0.3);
 }
 
 /* Icons */
@@ -72,7 +72,7 @@ main::before {
 	margin: -25px 0 0 -25px;
 	pointer-events: none;
 	border-radius: 50%;
-	background: radial-gradient(circle, rgba(253,192,206,1) 0%, rgba(252,166,94,1) 35%, rgba(24,26,130,1) 100%);
+	background: radial-gradient(circle, rgb(253,192,206,1) 0%, rgb(252,166,94,1) 35%, rgb(24,26,130,1) 100%);
 	animation: loaderAnim .8s ease-in infinite alternate forwards;
 }
 @keyframes loaderAnim {
@@ -88,7 +88,7 @@ main::before {
 	min-height: 75vh;
 	margin: 5em auto;
 	padding: 4em 1.5em 8em 1.5em;
-	background: rgba(53, 50, 50, 0.98);
+	background: rgb(53, 50, 50, 0.98);
 }
 .content__text {
 	width: 100%;
@@ -197,7 +197,7 @@ main::before {
     height: 40px;
     padding: 5px;
 	border-radius: 3px;
-	background: rgba(53, 50, 50);
+	background: rgb(53, 50, 50);
     cursor: pointer;
     z-index: 2;
 }
@@ -208,7 +208,7 @@ main::before {
 	left: 0;
 	width: 100%;
 	border-radius: 3px;
-	background: rgba(53, 50, 50);
+	background: rgb(53, 50, 50);
 	text-align: center;
 	font-size: 11px;
 }
@@ -221,11 +221,11 @@ main::before {
 	transition: all .7s;
 }
 .close-button {
-	background: rgba(53, 50, 50);
+	background: rgb(53, 50, 50);
 }
 .close-button::after {
 	content: 'CLOSE';
-	background: rgba(53, 50, 50);
+	background: rgb(53, 50, 50);
 }
 .close-button > .border {
 	position: absolute;
@@ -251,8 +251,8 @@ main::before {
 	right: 0;
 	width: 15em;
 	padding-bottom: 17em;
-	border: 2px solid rgba(53, 50, 50);
-	background: rgba(53, 50, 50);
+	border: 2px solid rgb(53, 50, 50);
+	background: rgb(53, 50, 50);
 	transition: .7s ease-in-out;
 }
 .hamb-nav > .nav-ul {
@@ -271,7 +271,7 @@ main::before {
 	font-size: calc(21px + .4vw);
 	font-weight: 400;
 	text-align: center;
-	color: rgba(53, 50, 50);
+	color: rgb(53, 50, 50);
 }
 
 @media screen and (max-width: 415px) {
