@@ -14,56 +14,51 @@
 	<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
 	<!-- css -->
-	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/modaal.min.css">
-	<link rel="stylesheet" href="css/style.css">
 
 	<!-- script -->
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-	<script src="js/modaal.min.js"></script>
-	<script src="js/regl.min.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 	<!-- favicon -->
-	<meta name="msapplication-square70x70logo" content="/site-tile-70x70.png">
-	<meta name="msapplication-square150x150logo" content="/site-tile-150x150.png">
-	<meta name="msapplication-wide310x150logo" content="/site-tile-310x150.png">
-	<meta name="msapplication-square310x310logo" content="/site-tile-310x310.png">
+	<meta name="msapplication-square70x70logo" content="<%= require('../favicons/site-tile-70x70.png') %>">
+	<meta name="msapplication-square150x150logo" content="<%= require('../favicons/site-tile-150x150.png')>">
+	<meta name="msapplication-wide310x150logo" content="<%= require('../favicons/site-tile-310x150.png')>">
+	<meta name="msapplication-square310x310logo" content="<%= require('../favicons/site-tile-310x310.png')>">
 	<meta name="msapplication-TileColor" content="#0078d7">
-	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicons/favicon.ico">
-	<link rel="icon" type="image/vnd.microsoft.icon" href="favicons/favicon.ico">
-	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="36x36" href="favicons/android-chrome-36x36.png">
-	<link rel="icon" type="image/png" sizes="48x48" href="favicons/android-chrome-48x48.png">
-	<link rel="icon" type="image/png" sizes="72x72" href="favicons/android-chrome-72x72.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="favicons/android-chrome-96x96.png">
-	<link rel="icon" type="image/png" sizes="128x128" href="favicons/android-chrome-128x128.png">
-	<link rel="icon" type="image/png" sizes="36x36" href="favicons/icon-36x36.png">
-	<link rel="icon" type="image/png" sizes="48x48" href="favicons/icon-48x48.png">
-	<link rel="icon" type="image/png" sizes="72x72" href="favicons/icon-72x72.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="favicons/icon-96x96.png">
-	<link rel="icon" type="image/png" sizes="128x128" href="favicons/icon-128x128.png">
-	<link rel="icon" type="image/png" sizes="144x144" href="favicons/icon-144x144.png">
-	<link rel="icon" type="image/png" sizes="152x152" href="favicons/icon-152x152.png">
-	<link rel="icon" type="image/png" sizes="160x160" href="favicons/icon-160x160.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="favicons/icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="196x196" href="favicons/icon-196x196.png">
-	<link rel="icon" type="image/png" sizes="256x256" href="favicons/icon-256x256.png">
-	<link rel="icon" type="image/png" sizes="384x384" href="favicons/icon-384x384.png">
-	<link rel="icon" type="image/png" sizes="512x512" href="favicons/icon-512x512.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicons/icon-16x16.png">
-	<link rel="icon" type="image/png" sizes="24x24" href="favicons/icon-24x24.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="favicons/icon-32x32.png">
-	<link rel="manifest" href="favicons/manifest.json">
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+	<link rel="icon" type="image/vnd.microsoft.icon" href="../favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="../favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/android-chrome-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/android-chrome-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/android-chrome-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/android-chrome-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/android-chrome-128x128.png">
+	<link rel="icon" type="image/png" sizes="36x36" href="../favicons/icon-36x36.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="../favicons/icon-48x48.png">
+	<link rel="icon" type="image/png" sizes="72x72" href="../favicons/icon-72x72.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../favicons/icon-96x96.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="../favicons/icon-128x128.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="../favicons/icon-144x144.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="../favicons/icon-152x152.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="../favicons/icon-160x160.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../favicons/icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="196x196" href="../favicons/icon-196x196.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="../favicons/icon-256x256.png">
+	<link rel="icon" type="image/png" sizes="384x384" href="../favicons/icon-384x384.png">
+	<link rel="icon" type="image/png" sizes="512x512" href="../favicons/icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../favicons/icon-16x16.png">
+	<link rel="icon" type="image/png" sizes="24x24" href="../favicons/icon-24x24.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../favicons/icon-32x32.png">
+	<link rel="manifest" href="../favicons/manifest.json">
 </head>
 <body class="demo-8 loading">
 <div id="wrapper">
@@ -100,7 +95,7 @@
 			<h3 class="content__text">PROFILE</h3>
 			<div class="profile-item">
 				<div>
-					<img src="img/download20200901084031.png" alt="プロフィール画像" class="profile-item__img">
+					<img src="../img/face.png" alt="プロフィール画像" class="profile-item__img">
 				</div>
 				<div class="profile-item__text text-style">
 					<p>ご訪問ありがとうございます!Junichiro Kohariと申します。</p>
@@ -149,7 +144,7 @@
 			<ul class="works text-style">
 				<li class="work">
 					<a id="dummy1" class="media-item modaal" href="#dummy1-modal">
-						<img src="img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画">
+						<img src="../img/works/dummy1.png" class="media-item__img" alt="株式会社テスト様公式HPのトップ画">
 						<h3 class="media-item__title">株式会社テスト様公式HP</h3>
 						<ul class="tags">
 							<li><span class="tag tagcolor-coding">#コーディング</span></li>
@@ -162,7 +157,7 @@
 				</li>
 				<li class="work">
 					<a id="dummy2" class="media-item modaal" href="#dummy2-modal">
-						<img src="img/works/dummy2.png" class="media-item__img" alt="テスト太郎様個人ブログのトップ画">
+						<img src="../img/works/dummy2.png" class="media-item__img" alt="テスト太郎様個人ブログのトップ画">
 						<h3 class="media-item__title">テスト太郎様個人ブログ</h3>
 						<ul class="tags">
 							<li><span class="tag tagcolor-wordpress">#WordPress</span></li>
@@ -174,7 +169,7 @@
 				</li>
 				<li class="work">
 					<a id="dummy3" class="media-item modaal" href="#dummy3-modal">
-						<img src="img/works/dummy3.png" class="media-item__img" alt="テスト花子様個人ブログのトップ画">
+						<img src="../img/works/dummy3.png" class="media-item__img" alt="テスト花子様個人ブログのトップ画">
 						<h3 class="media-item__title">テスト花子様個人ブログ</h3>
 						<ul class="tags">
 							<li><span class="tag tagcolor-wordpress">#WordPress</span></li>
@@ -230,7 +225,5 @@
 		<small class="copyright">COPYRIGHT&copy;2020 Junichiro Kohari. ALL RIGHTS RESERVED.</small>
 	</footer>
 </div>
-<script src="js/shader.js"></script>
-<script src="js/script.js"></script>
 </body>
 </html>

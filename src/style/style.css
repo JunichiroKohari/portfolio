@@ -88,7 +88,7 @@ main::before {
 	min-height: 75vh;
 	margin: 5em auto;
 	padding: 4em 1.5em 8em 1.5em;
-	background: rgb(53, 50, 50, 0.98);
+	background: rgba(53, 50, 50, 0.98);
 }
 .content__text {
 	width: 100%;
