@@ -1,78 +1,97 @@
 const path = require('path')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const publidDir = path.join(__dirname, '/public')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
-module.exports = [
-  {
-    mode: "development",
-    devtool: "hidden-source-map",
-    entry: [
-      './js/index.js',
+module.exports = {
+    mode: 'production',
+    devtool: 'source-map',
+    entry: './src/js/index.js',
+    output: {
+        path: path.resolve(__dirname, './dist'),
+        filename: 'js/index.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                    }
+                ]
+            },
+            {
+                test: /\.(css|sass|scss)/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: false
+                        }
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.(png|jpg|jpeg)/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            esModule: false,
+                            name: 'images/[name].[ext]'
+                        }
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 70
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.html/,
+                use: [
+                    {
+                        loader: 'html-loader'
+                    },
+                ]
+            },
+            {
+                test: /\.json/,
+                use: [
+                    {
+                        loader: 'json-loader',
+                    }
+                ]
+            },
+        ],
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: './style/main.css',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/html/index.html',
+            filename: 'index.html'
+        }),
+        new CleanWebpackPlugin()
     ],
-    output: {
-      path: publidDir,
-      publicPath: '/',
-      clean: {
-        keep: '/index.html/'
-      }
-    },
-    module: {
-      rules: [
-        {
-          exclude: /node_modules/,
-          use: [
-            {
-              loader: "babel-loader",
-              options: {
-                presets: ["@babel/preset-env", "@babel/preset-react"],
-              },
-            },
-          ],
-        },
-      ],
-    },
-    resolve: {
-      extensions: ['.js', '.jsx'],
-    },
-    devServer: {
-      historyApiFallback: true,
-      static: {
-        directory: publidDir
-      }
-    },
-  },
-  {
-    mode: "development",
-    entry: {
-      style: "./css/style.css",
-    },
-    output: {
-      path: publidDir,
-    },
-    module: {
-      rules: [
-        {
-          test: /\.css$/,
-          use: [
-            {
-              loader: MiniCssExtractPlugin.loader,
-            },
-            "css-loader",
-            "sass-loader",
-          ],
-        },
-        {
-          test: /\.scss$/,
-          use: [
-            {
-              loader: MiniCssExtractPlugin.loader,
-            },
-            "css-loader",
-            "sass-loader",
-          ],
-        },
-      ],
-    },
-    plugins: [new MiniCssExtractPlugin({ filename: "bundle.css" })],
-  },
-]
+    externals: {
+        jquery: 'jQuery',
+        regl: 'createREGL',
+        aos: 'AOS',
+        modaal: 'modaal'
+    }
+}
