@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-    mode: 'production',
-    devtool: 'source-map',
+    mode: 'development',
+    // devtool: 'source-map',
     entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -41,24 +41,10 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|jpeg)/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            esModule: false,
-                            name: 'images/[name].[ext]'
-                        }
-                    },
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 70
-                            }
-                        }
-                    }
-                ]
+                type: 'asset/resource',
+                generator: {
+                    filename: 'ima/[name].[ext]'
+                },
             },
             {
                 test: /\.html/,
