@@ -47,10 +47,13 @@ module.exports = {
                 },
             },
             {
-                test: /\.html/,
+                test: /\.pug/,
                 use: [
                     {
                         loader: 'html-loader'
+                    },
+                    {
+                        loader: 'pug-html-loader'
                     },
                 ]
             },
@@ -69,8 +72,8 @@ module.exports = {
             filename: './style/main.css',
         }),
         new HtmlWebpackPlugin({
-            template: './src/html/index.html',
-            filename: 'index.html'
+            template: './src/html/index.pug',
+            // filename: 'index.pug'
         }),
         new CleanWebpackPlugin()
     ],
