@@ -1,0 +1,25 @@
+section(
+  id="contact"
+  class="content content--related"
+  data-aos="zoom"
+  data-aos-delay="100"
+)
+  h3(class="content__text") CONTACT
+  p(class="contact-info")
+    | &#x1f481; 当サイトやお仕事についてのお問い合わせは以下にご入力いただき、送信をお願いいたします。
+  p(class="contact-info") 原則として3営業日以内にご返信いたします。
+  form(action="#" class="contact-form")
+    .input-item
+      span(class="required") 必須
+      label(class="contact-label") お名前
+      input(type="text" class="contact-input" required)
+    .input-item
+      span(class="required") 必須
+      label(class="contact-label") メールアドレス
+      input(type="email" class="contact-input" required)
+    .input-item
+      span(class="required") 必須
+      label(class="contact-label") メッセージ
+      textarea(name="contact-txt" class="contact-input contact-txt" required)
+    div(class="input-item btn-div")
+      button(class="btn" onclick="alert('hey');") 送信
