@@ -1,0 +1,93 @@
+doctype html
+html(lang="ja" class="no-js")
+head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  title Junichiro Kohari - Software Engineer
+  meta(name="description" content="システム開発承っております！新規作成から既存サイトの改修まで幅広く対応しております！")
+  meta(name="author" content="J.Kohari")
+
+  <!-- Google Font -->
+  link(href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet")
+
+  <!-- Font Awesome -->
+  link(href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet")
+
+  <!-- css -->
+  link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
+  link(href="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/css/modaal.min.css" rel="stylesheet")
+
+  <!-- script -->
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/regl/2.1.0/regl.min.js')
+  script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js")
+
+  <!-- favicon -->
+body(class="demo-8 loading")
+#wrapper
+  canvas(id="webgl")
+  header(class="content--header")
+    .content__top
+      .main-title-area
+        h1(class="main-title") Junichiro Kohari
+        h2(class="main-subtitle") システム開発承ります &#128421; &#128187; &#128241;
+  nav(class="nav display-none")
+    ul(class="nav-ul")
+      li(class="nav-li")
+        a(href="#wrapper" class="nav-link") TOP
+      li(class="nav-li")
+        a(href="#profile" class="nav-link") PROFILE
+      li(class="nav-li")
+        a(href="#services" class="nav-link") SERVICES
+      li(class="nav-li")
+        a(href="#works" class="nav-link") WORKS
+      li(class="nav-li")
+        a(href="#contact" class="nav-link") CONTACT
+    .hamb-button
+      span(class="border")
+      span(class="border")
+      span(class="border")
+  main
+    div(class="content main-visual")
+      h2(class="main-visual__message")
+        span fast,
+        br
+        span clean,
+        br
+        span useful
+    section(
+      id="profile"
+      class="content content--related"
+      data-aos="zoom"
+      data-aos-delay="100"
+    )
+      h3(class="content__text") PROFILE
+      .profile-item
+        div
+          img(
+            src="../img/face.png"
+            alt="プロフィール画像"
+            class="profile-item__img"
+          )
+        div(class="profile-item__text text-style")
+          p ご訪問ありがとうございます!Junichiro Kohariと申します。
+          p 大阪府内でSEとして働くかたわら、Web制作のお仕事も行っております。
+          p(class="profile-item__text-syumi")
+            | 趣味は、外国人の友達とチャットをすることです。ポーランド人やウルグアイ人など、ネットで出会った友達と週末によくチャットをしています
+          br
+          p 普段当たり前のようにネットでコミュニケーションを取っていますが、はるか遠く離れた所にいる人と瞬時にやりとりができるってすごいことですよね。
+          br
+          p 私は、ネットによって人と人とが繋がるという体験を仕事でも実現させていきたいなと思っています。
+          p(class="profile-item__text-contactme") ちょっとした相談やお悩み事の相談でも構いません。
+          br
+          p ご気軽にご連絡ください。
+          p ■ 使用PC、ツール
+          ul(class="tools")
+            li(class="tool") Windows10
+            li(class="tool") MacbookPro(MacOS Catalina)
+            li(class="tool") VSCode
+            li(class="tool") Adobe Photoshop
+            li(class="tool") Adobe XD
+  footer(class="footer")
+    small(class="copyright") COPYRIGHT&copy;2020 Junichiro Kohari. ALL RIGHTS RESERVED.
