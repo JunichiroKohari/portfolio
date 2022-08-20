@@ -1,6 +1,5 @@
 import $ from 'jquery'
 // import 'modaal'
-import createREGL from 'regl'
 import AOS from 'aos'
 import './script.js'
 

@@ -6,7 +6,8 @@
   "author": "JunichiroKohari <junichiro@kohari.jp>",
   "license": "MIT",
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server"
+    "start": "./node_modules/.bin/webpack-dev-server",
+    "build": "npx webpack --mode production"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
@@ -29,6 +30,7 @@
     "mini-css-extract-plugin": "^2.6.1",
     "node-sass": "^7.0.1",
     "pug-html-loader": "^1.1.5",
+    "regl": "^2.1.0",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
     "url-loader": "^4.1.1",

@@ -79,7 +79,6 @@ module.exports = {
     ],
     externals: {
         jquery: 'jQuery',
-        regl: 'createREGL',
         aos: 'AOS',
         modaal: 'modaal'
     }

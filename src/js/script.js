@@ -1,3 +1,5 @@
+import createREGL from 'regl'
+
 const makeAnime = function() {
   const FS_CODE = `
     #define TWO_PI 6.2831853072
