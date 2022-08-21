@@ -174,7 +174,7 @@ const makeAnime = function() {
 
   // SP版サブタイトル文字数変更
   $(window).on('load resize', function(){
-    const subtitle = 'Webアプリ開発承ります'
+    const subtitle = 'Software Developer'
     const winW = $(window).width()
     const devW = 415
     if (winW <= devW) {
