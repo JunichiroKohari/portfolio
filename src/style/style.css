@@ -85,7 +85,7 @@ main::before {
 .content--related {
 	position: relative;
 	justify-content: center;
-	min-height: 75vh;
+	min-height: 50vh;
 	margin: 5em auto;
 	padding: 4em 1.5em 8em 1.5em;
 	background: rgba(53, 50, 50, 0.98);
@@ -306,12 +306,12 @@ main::before {
 	width: 88%;
 	margin: 0 auto;
 }
+.profile-icon-area {
+	text-align: center;
+}
 .profile-item__img {
 	display: block;
 	height: 300px;
-}
-.profile-item__text-syumi {
-	padding-bottom: .8em;
 }
 @media screen and (max-width:960px) {
 	.profile-item {
@@ -349,15 +349,15 @@ main::before {
 .fa-code {
 	color: darksalmon;
 }
-.fa-wordpress {
+.fa-object-ungroup {
 	color: dodgerblue;
 }
 .fa-palette {
 	background: #FEAC5E;
 	background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
 	background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
-  	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 .service-title {
 	margin-top: 2em;
