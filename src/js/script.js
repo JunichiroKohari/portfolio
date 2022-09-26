@@ -1,4 +1,6 @@
 import createREGL from 'regl'
+import { createClient } from 'microcms-js-sdk'
+import { config } from '../../config'
 
 const makeAnime = function() {
   const FS_CODE = `
@@ -169,6 +171,27 @@ const makeAnime = function() {
   }
 }
 
+const embedContents = function() {
+  const client = createClient({
+    serviceDomain: config.serviceDomain,
+    apiKey: config.apiKey,
+  });
+  client
+    .get({
+      endpoint: 'works',
+      queries: { filters: 'createdAt[greater_than]2021' },
+    })
+    .then((res) => {
+      if (res.totalCount < 0) {
+        return
+      }
+      const testContents = res.contents[0].projectName
+      $('#works-list').append(`<p class="dummy-modal-right">${testContents}</p>`)
+      console.log(res)
+    })
+    .catch((err) => console.error(err));
+}
+
 !function() {
   'use strict'
 
@@ -233,4 +256,6 @@ const makeAnime = function() {
   })
 
   makeAnime()
+
+  embedContents()
 }()
