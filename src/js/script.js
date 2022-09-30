@@ -185,8 +185,10 @@ const embedContents = function() {
       if (res.totalCount < 0) {
         return
       }
-      const testContents = res.contents[0].projectName
-      $('#works-list').append(`<p class="dummy-modal-right">${testContents}</p>`)
+      res.contents.forEach(content => {
+        const testContents = content.projectName
+        $('.work').append($('#dummy2').clone())
+      });
       console.log(res)
     })
     .catch((err) => console.error(err));
