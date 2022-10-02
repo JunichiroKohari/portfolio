@@ -186,8 +186,8 @@ const embedContents = function() {
         return
       }
       res.contents.forEach(content => {
-        const testContents = content.projectName
-        $('.work').append($('#dummy2').clone())
+        $('#work1').find('h3').text(content.projectName)
+        $('#works-list').append($('#work').clone())
       });
       console.log(res)
     })
