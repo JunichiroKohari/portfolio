@@ -187,9 +187,10 @@ const embedContents = function() {
       }
       res.contents.forEach(content => {
         $('#work1').find('h3').text(content.projectName)
+        const ulBusinessType = $('#work1').find('#businessType')
+        ulBusinessType.append(`<li><span class="tag tagcolor-design">#${content.businessType}</span></li>`)
         $('#works-list').append($('#work').clone())
       });
-      console.log(res)
     })
     .catch((err) => console.error(err));
 }
