@@ -6,22 +6,22 @@ section(
 )
   h3(class="content__text") WORKS
   ul(id="works-list" class="works text-style")
-    li(class="work")
+    li(id="work-li" class="work")
       a(
-        id="work1"
+        id="work-card"
         class="media-item modaal"
         href="#work1-modal"
       )
         img(
           src="../img/works/dummy1.png"
-          class="media-item__img"
+          class="media-item__img work-card__img"
           alt="work-image"
         )
-        h3(class="media-item__title")
-        ul(id="businessType" class="tags")
-        ul(id="processes" class="tags")
-        ul(id="language" class="tags")
-        ul(id="fw" class="tags")
+        h3(class="media-item__title work-card__projectName")
+        ul(id="businessType" class="tags work-card__businessType")
+        ul(id="processes" class="tags work-card__processes")
+        ul(id="languages" class="tags work-card__languages")
+        ul(id="frameworks" class="tags work-card__frameworks")
     li(class="work")
       a(
         id="dummy1"
@@ -45,48 +45,6 @@ section(
             span(class="tag tagcolor-design") #シンプル
           li
             span(class="tag tagcolor-quality") #納品一週間以内
-    li(class="work")
-      a(
-        id="dummy2"
-        class="media-item modaal"
-        href="#dummy2-modal"
-      )
-        img(
-          src="../img/works/dummy2.png"
-          class="media-item__img"
-          alt="テスト太郎様個人ブログのトップ画"
-        )
-        h3(class="media-item__title") テスト太郎様個人ブログ
-        ul(class="tags")
-          li
-            span(class="tag tagcolor-wordpress") #WordPress
-          li
-            span(class="tag tagcolor-category") #個人ブログ
-          li
-            span(class="tag tagcolor-design") #アフィリエイト
-          li
-            span(class="tag tagcolor-quality") #SEO
-    li(class="work")
-      a(
-        id="dummy3"
-        class="media-item modaal"
-        href="#dummy3-modal"
-      )
-        img(
-          src="../img/works/dummy3.png"
-          class="media-item__img"
-          alt="テスト花子様個人ブログのトップ画"
-        )
-        h3(class="media-item__title") テスト花子様個人ブログ
-        ul(class="tags")
-          li
-            span(class="tag tagcolor-wordpress") #WordPress
-          li
-            span(class="tag tagcolor-category") #個人ブログ
-          li
-            span(class="tag tagcolor-design") #おしゃれ
-          li
-            span(class="tag tagcolor-quality") #納品一週間以内
   div(id="dummy1-modal" class="modaal-window")
     div(id="modaal-window-wrapper1" class="modaal-window-wrapper")
       .dummy-modal-left
@@ -97,7 +55,3 @@ section(
             dd 開発手法
             dt アジャイル
       p.dummy-modal-right dummy1の紹介文
-  div(id="dummy2-modal" class="modaal-window")
-    div(id="modaal-window-wrapper2" class="modaal-window-wrapper")
-  div(id="dummy3-modal" class="modaal-window")
-    div(id="modaal-window-wrapper3" class="modaal-window-wrapper")
