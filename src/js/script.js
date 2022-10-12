@@ -171,6 +171,26 @@ const makeAnime = function() {
   }
 }
 
+const showWorkTags = function(workCard, content) {
+  console.log(workCard)
+  workCard.find('.work-card__projectName').text(content.projectName)
+
+  const ulBusinessType = workCard.find('.work-card__businessType')
+  ulBusinessType.append(`<li><span class="tag tagcolor-design">#${content.businessType}</span></li>`)
+
+  const ulProcesses = workCard.find('.work-card__processes')
+  content.processes.forEach(function(process) {
+    ulProcesses.append(`<li><span class="tag tagcolor-category">#${process}</span></li>`)
+  })
+  const ulLanguages = workCard.find('.work-card__languages')
+  content.languages.forEach(function(lang) {
+    ulLanguages.append(`<li><span class="tag tagcolor-wordpress">#${lang}</span></li>`)
+  })
+  const ulFrameworks = workCard.find('.work-card__frameworks')
+  content.frameworks.forEach(function(fw) {
+    ulFrameworks.append(`<li><span class="tag tagcolor-quality">#${fw}</span></li>`)
+  })
+}
 const embedContents = function() {
   const client = createClient({
     serviceDomain: config.serviceDomain,
@@ -185,16 +205,14 @@ const embedContents = function() {
       if (res.totalCount < 0) {
         return
       }
-      res.contents.forEach(content => {
-        $('#work1').find('h3').text(content.projectName)
-        const ulBusinessType = $('#work1').find('#businessType')
-        ulBusinessType.append(`<li><span class="tag tagcolor-design">#${content.businessType}</span></li>`)
-        const ulProcesses = $('#work1').find('#processes')
-        content.processes.forEach(function(process) {
-          ulProcesses.append(`<li><span class="tag tagcolor-category">#${process}</span></li>`)
-        })
-        $('#works-list').append($('#work').clone())
-      });
+      res.contents.forEach((content, i) => {
+        const clonedElem = $('#work-li').clone()
+        clonedElem.attr('id', `#work-li${i}`)
+        const workCard = clonedElem.find('#work-card')
+        workCard.attr('id', `#work-card${i}`)
+        showWorkTags(workCard, content)
+        $('#works-list').append(clonedElem)
+      })
     })
     .catch((err) => console.error(err));
 }
