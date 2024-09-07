@@ -28,7 +28,7 @@
     "import-glob-loader": "^1.1.0",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^2.6.1",
-    "node-sass": "^7.0.1",
+    "node-sass": "^9.0.0",
     "pug-html-loader": "^1.1.5",
     "regl": "^2.1.0",
     "sass-loader": "^12.6.0",
