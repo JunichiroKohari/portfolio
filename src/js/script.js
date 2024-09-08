@@ -1,3 +1,5 @@
+import $ from 'jquery'
+import AOS from 'aos'
 import createREGL from 'regl'
 import { createClient } from 'microcms-js-sdk'
 import { config } from '../../config'
@@ -220,9 +222,17 @@ const embedContents = function() {
 !function() {
   'use strict'
 
+  const windowHeight = $(window).height()
+  $('.content').css({
+    'height': windowHeight,
+    'padding-top': windowHeight * 0.05,
+    'padding-bottom': windowHeight * 0.05,
+  });
+  $('.main-visual').css({'height': $(window).height()});
+
   // SP版サブタイトル文字数変更
   $(window).on('load resize', function(){
-    const subtitle = 'Software Developer'
+    const subtitle = 'Fleelance Software Developer'
     const winW = $(window).width()
     const devW = 415
     if (winW <= devW) {

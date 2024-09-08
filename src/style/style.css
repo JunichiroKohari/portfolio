@@ -84,11 +84,15 @@ main::before {
 /* 各セクション共通設定 */
 .content--related {
 	position: relative;
-	justify-content: center;
+	display: flex;
 	min-height: 50vh;
-	margin: 5em auto;
-	padding: 4em 1.5em 8em 1.5em;
-	background: rgba(53, 50, 50, 0.98);
+	padding: 0 1.5em;
+
+	.section-wrapper {
+		flex: 1;
+		height: 100%;
+		background: rgba(53, 50, 50, 0.98);
+	}
 }
 .content__text {
 	width: 100%;
@@ -292,7 +296,7 @@ main::before {
 }
 .main-visual__message {
 	width: 100%;
-	padding-left: .5em;
+	padding-left: .4em;
 	margin-top: .3em;
 	margin-bottom: 1.5em;
 	font-size: calc(3em + 6vw);
